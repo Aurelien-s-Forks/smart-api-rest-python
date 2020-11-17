@@ -5,18 +5,18 @@ import random
 from . import routes
 
 
-@routes.route('/api/appartment/<id>', methods=['GET'])
-def get_appartment(id=0):
+@routes.route('/api/apartment/<id>', methods=['GET'])
+def get_apartment(id=0):
     room_data = {
         'id': id,
     }
     return jsonify(room_data)
 
 
-@routes.route('/api/appartment/<id>/sensors', methods=['GET'])
-def get_appartment_sensors(id=0):
-    appartment_data = {
-        'appartment_id': id,
+@routes.route('/api/apartment/<id>/sensors', methods=['GET'])
+def get_apartment_sensors(id=0):
+    apartment_data = {
+        'apartment_id': id,
         'sensors': [
             {
                 'id': 0
@@ -26,4 +26,4 @@ def get_appartment_sensors(id=0):
             }
         ]
     }
-    return jsonify(appartment_data)
+    return jsonify(apartment_data)
