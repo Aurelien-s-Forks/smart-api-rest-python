@@ -1,22 +1,19 @@
 from flask import jsonify
-from datetime import datetime
-import pytz
-import random
 from . import routes
 
 
-@routes.route('/api/apartment/<id>', methods=['GET'])
-def get_apartment(id=0):
+@routes.route('/api/apartment/<apartment_id>', methods=['GET'])
+def get_apartment(apartment_id=0):
     room_data = {
-        'id': id,
+        'id': apartment_id,
     }
     return jsonify(room_data)
 
 
-@routes.route('/api/apartment/<id>/sensors', methods=['GET'])
-def get_apartment_sensors(id=0):
+@routes.route('/api/apartment/<apartment_id>/sensors', methods=['GET'])
+def get_apartment_sensors(apartment_id=0):
     apartment_data = {
-        'apartment_id': id,
+        'apartment_id': apartment_id,
         'sensors': [
             {
                 'id': 0

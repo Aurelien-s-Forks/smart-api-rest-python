@@ -36,12 +36,12 @@ class Sensor:
 
     @property
     def apartment(self):
-        return self.__appartment
+        return self.__apartement
 
     @apartment.setter
     def apartment(self, apartment):
         if type(apartment) == Apartment:
-            self.__appartment = apartment
+            self.apartement = apartment
 
     @property
     def values(self):
@@ -50,5 +50,3 @@ class Sensor:
     @values.setter
     def values(self, val):
         self.__values = val
-
-

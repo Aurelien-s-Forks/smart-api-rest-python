@@ -9,5 +9,3 @@ class Model:
     @name.setter
     def name(self, val):
         self.__name = val
-
-

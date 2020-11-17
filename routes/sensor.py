@@ -5,9 +5,9 @@ import random
 from . import routes
 
 
-@routes.route('/api/sensor/<id>', methods=['GET'])
-def get_sensor(id=0):
-    if int(id) % 2 == 0:
+@routes.route('/api/sensor/<sensor_id>', methods=['GET'])
+def get_sensor(sensor_id=0):
+    if int(sensor_id) % 2 == 0:
         room_data = {
             'id': id,
             'type': 'temperature',
@@ -26,4 +26,3 @@ def get_sensor(id=0):
             }
         }
     return jsonify(room_data)
-

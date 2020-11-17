@@ -34,4 +34,3 @@ class Value:
     def sensor(self, val):
         if type(val) == Sensor:
             self.__sensor = val
-
