@@ -6,6 +6,18 @@ This API allows to retrieve data from sensors placed in a building. An artificia
 
 ## Getting Started
 
+### Run with Docker
+
+1. Build the Docker image
+```bash
+docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
+```
+
+2. Run the Docker image
+```bash
+docker run --rm -p 5000:5000 riipeckx/bai-systems-smart-api-rest-python:latest
+```
+
 ### Installation
 
 1. Clone the repo
@@ -16,7 +28,6 @@ git clone git@github.com:Building-AI-Systems/smart-api-rest-python.git
 2. Install Python >= 2.7.0
 
 [Python Download](https://www.python.org/downloads/)
-
 
 3. Install requirements
 
