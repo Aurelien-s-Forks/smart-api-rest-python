@@ -1,11 +1,19 @@
 #!flask/bin/python
 from flask import Flask, json
-
+from flask_swagger_ui import get_swaggerui_blueprint
 from routes import *
 
-app = Flask(__name__)
-app.register_blueprint(routes)
+swaggerui_blueprint = get_swaggerui_blueprint(
+    '/api/docs',
+    'http://petstore.swagger.io/v2/swagger.json' ,
+    config={
+        'app_name': "Building AI Systems",
+    }
+)
 
+app = Flask(__name__)
+app.register_blueprint(swaggerui_blueprint)
+app.register_blueprint(routes)
 
 @app.route('/api/', methods=['GET'])
 def index():
