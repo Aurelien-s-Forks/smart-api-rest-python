@@ -19,20 +19,10 @@ def get_appartment_sensors(id=0):
         'appartment_id': id,
         'sensors': [
             {
-                'id': 0,
-                'type': 'temperature',
-                'value': {
-                    'temperature': random.randint(15, 22),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
-                }
+                'id': 0
             },
             {
-                'id': 4,
-                'type': 'pipeline-pressure',
-                'value': {
-                    'pressure': random.randint(1, 5),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
-                }
+                'id': 4
             }
         ]
     }
