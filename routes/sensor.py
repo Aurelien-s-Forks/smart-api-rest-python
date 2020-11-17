@@ -9,7 +9,7 @@ from . import routes
 def get_sensor(sensor_id=0):
     if int(sensor_id) % 2 == 0:
         room_data = {
-            'id': id,
+            'id': sensor_id,
             'type': 'temperature',
             'value': {
                 'temperature': random.randint(15, 22),
@@ -18,7 +18,7 @@ def get_sensor(sensor_id=0):
         }
     else:
         room_data = {
-            'id': id,
+            'id': sensor_id,
             'type': 'pipeline-pressure',
             'value': {
                 'pressure': random.randint(1, 5),
