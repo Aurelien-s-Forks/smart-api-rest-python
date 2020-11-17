@@ -4,3 +4,4 @@ routes = Blueprint('routes', __name__)
 
 from .pipeline_pressure import *
 from .temperature import *
+from .presence_sensor import *
