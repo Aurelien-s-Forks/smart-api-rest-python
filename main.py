@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 
 
-@app.route('/api/')
+@app.route('/api/', methods=['GET'])
 def index():
     response = app.response_class(
         response=json.dumps("Building AI Systems API"),
@@ -16,11 +16,26 @@ def index():
     return response
 
 
-@app.route('/api/pipeline-pressure/<room_id>')
+@app.route('/api/pipeline-pressure/<room_id>', methods=['GET'])
 def get_pipeline_pressure(room_id=0):
     room_data = {
         'room_id': room_id,
         'pipeline_pressure': random.randint(1, 5),
+        'date': datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    }
+    response = app.response_class(
+        response=json.dumps(room_data),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+
+@app.route('/api/temperature/<room_id>', methods=['GET'])
+def get_temperature(room_id=0):
+    room_data = {
+        'room_id': room_id,
+        'temperature': random.randint(15, 22),
         'date': datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
     }
     response = app.response_class(
