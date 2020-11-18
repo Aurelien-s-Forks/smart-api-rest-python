@@ -29,6 +29,10 @@ def index():
     )
     return response
 
+@app.errorhandler(Exception)
+def exception_handler(error):
+    return 'ERROR ' + repr(error)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
