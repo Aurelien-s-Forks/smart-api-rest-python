@@ -1,7 +1,11 @@
 import random
 from helper import DateHelper
 
+
 class SensorData:
+    def __init__(self):
+        pass
+
     @staticmethod
     def get_all():
         sensor_data = [
@@ -44,5 +48,6 @@ class SensorData:
         ]
         return sensor_data
 
+    @staticmethod
     def get_by_id(sensor_id=0):
         return next(x for x in SensorData.get_all() if x["sensor_id"] == int(sensor_id))
