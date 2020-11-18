@@ -1,7 +1,26 @@
+<<<<<<< HEAD
+=======
+language: python
+
+python:
+  - "2.7"
+  - "3.8"
+  - "pypy"
+  - "pypy3"
+
+>>>>>>> 0fc6aac16e8626d9f74e19a1f87ce555bac23a01
 services:
   - docker
 
 before_install:
   - docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
+<<<<<<< HEAD
+=======
+
+install:
+  - pip install -r requirements.txt
+  - pip install .
+
+>>>>>>> 0fc6aac16e8626d9f74e19a1f87ce555bac23a01
 on:
     branch: master
