@@ -1,6 +1,8 @@
 version: '3'
 
 networks:
+  bai-backend:
+    external: true
   traefik:
     external: true
 
@@ -9,6 +11,7 @@ services:
     image: riipeckx/bai-systems-smart-api-rest-python:latest
     networks:
       - traefik
+      - bai-backend
     deploy:
       mode: replicated
       replicas: 1
