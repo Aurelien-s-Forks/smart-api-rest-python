@@ -9,27 +9,27 @@ This API allows to retrieve data from sensors placed in a building. An artificia
 
 ### Run with Docker
 
-0. Grant exec on scripts
+1. Grant exec on scripts
 ```bash
 chmod u+x docker_*
 ```
 
-1. Build the Docker image
+2. Build the Docker image
 ```bash
 ./docker_build.sh
 ```
 
-2. Push the Docker image
+3. Push the Docker image
 ```bash
 ./docker_push.sh
 ```
 
-3. Run the Docker image
+4. Run the Docker image
 ```bash
 ./docker_deploy.sh
 ```
 
-4. Access the API
+5. Access the API
 
 From here, you can access the API [here](http://api.bai-systems.cf).
 
