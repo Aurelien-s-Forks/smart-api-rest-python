@@ -3,7 +3,7 @@ from . import controller
 from data import ApartmentData
 
 
-@controller.route('/api/apartment', methods=['GET'])
+@controller.route('/api/apartments', methods=['GET'])
 def get_apartments():
     return jsonify(ApartmentData.get_all())
 
