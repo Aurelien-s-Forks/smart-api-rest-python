@@ -8,7 +8,7 @@ from data import *
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     '/api/docs',
-    'http://petstore.swagger.io/v2/swagger.json',
+    'https://api.bai-systems.cf/api/swagger',
     config={
         'app_name': "Building AI Systems",
     }
