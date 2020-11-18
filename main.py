@@ -1,7 +1,7 @@
 #!flask/bin/python
 from flask import Flask, json
 from flask_swagger_ui import get_swaggerui_blueprint
-from routes import *
+from route import *
 from entity import *
 
 swaggerui_blueprint = get_swaggerui_blueprint(
