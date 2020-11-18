@@ -1,4 +1,5 @@
 # Building AI Systems API
+[![Travis CI Build](https://travis-ci.com/Building-AI-Systems/smart-api-rest-python.svg?branch=master)](https://travis-ci.com/Building-AI-Systems/smart-api-rest-python.svg?branch=master)
 
 ## Description
 
