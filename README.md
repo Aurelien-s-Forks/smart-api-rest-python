@@ -8,20 +8,29 @@ This API allows to retrieve data from sensors placed in a building. An artificia
 
 ### Run with Docker
 
+0. Grant exec on scripts
+```bash
+chmod u+x docker_*
+```
+
 1. Build the Docker image
 ```bash
-docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
+./docker_build.sh
 ```
 
 2. Push the Docker image
 ```bash
-docker push riipeckx/bai-systems-smart-api-rest-python:latest
+./docker_push.sh
 ```
 
 3. Run the Docker image
 ```bash
-chmod u+x docker_deploy.sh docker_stop.sh docker_restart.sh && ./docker_deploy.sh
+./docker_deploy.sh
 ```
+
+4. Access the API
+
+From here, you can access the API [here](http://api.bai-systems.cf).
 
 ### Installation
 
