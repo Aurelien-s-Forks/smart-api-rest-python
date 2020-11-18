@@ -23,7 +23,7 @@ class SensorData:
                 'sensor_id': 7,
                 'type': 'temperature',
                 'value': {
-                    'pressure': random.randint(15, 22),
+                    'temperature': random.randint(15, 22),
                     'date': DateHelper.get_today_date()
                 }
             },
@@ -32,7 +32,7 @@ class SensorData:
                 'sensor_id': 2,
                 'type': 'temperature',
                 'value': {
-                    'pressure': random.randint(15, 22),
+                    'temperature': random.randint(15, 22),
                     'date': DateHelper.get_today_date()
                 }
             },
@@ -41,7 +41,7 @@ class SensorData:
                 'sensor_id': 8,
                 'type': 'temperature',
                 'value': {
-                    'pressure': random.randint(10, 15),
+                    'temperature': random.randint(10, 15),
                     'date': DateHelper.get_today_date()
                 }
             }
