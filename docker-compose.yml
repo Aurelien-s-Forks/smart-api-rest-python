@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  traefik:
+    external: true
+
+services:
+  server:
+    image: riipeckx/bai-systems-smart-api-rest-python:latest
+    networks:
+      - traefik
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == worker
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.bai-systems-api.entrypoints=web"
+        - "traefik.http.routers.bai-systems-api.rule=Host(`api.bai-systems.cf`)"
+        - "traefik.http.routers.bai-systems-api.middlewares=redirect-https@file"
+        - "traefik.http.routers.bai-systems-api-https.tls=true"
+        - "traefik.http.routers.bai-systems-api-https.tls.certresolver=letsEncrypt"
+        - "traefik.http.routers.bai-systems-api-https.entrypoints=websecure"
+        - "traefik.http.routers.bai-systems-api-https.rule=Host(`api.bai-systems.cf`)"
+        - "traefik.http.services.bai-systems-api.loadbalancer.server.port=5000"

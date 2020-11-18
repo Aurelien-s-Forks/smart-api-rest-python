@@ -1,4 +1,5 @@
 # Building AI Systems API
+[![Travis CI Build](https://travis-ci.com/Building-AI-Systems/smart-api-rest-python.svg?branch=master)](https://travis-ci.com/Building-AI-Systems/smart-api-rest-python.svg?branch=master)
 
 ## Description
 
@@ -8,15 +9,29 @@ This API allows to retrieve data from sensors placed in a building. An artificia
 
 ### Run with Docker
 
-1. Build the Docker image
+0. Grant exec on scripts
 ```bash
-docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
+chmod u+x docker_*
 ```
 
-2. Run the Docker image
+1. Build the Docker image
 ```bash
-docker run --rm -p 5000:5000 riipeckx/bai-systems-smart-api-rest-python:latest
+./docker_build.sh
 ```
+
+2. Push the Docker image
+```bash
+./docker_push.sh
+```
+
+3. Run the Docker image
+```bash
+./docker_deploy.sh
+```
+
+4. Access the API
+
+From here, you can access the API [here](http://api.bai-systems.cf).
 
 ### Installation
 

@@ -1,6 +1,7 @@
 #!flask/bin/python
 from flask import Flask, json
 from flask_swagger_ui import get_swaggerui_blueprint
+from helper import *
 from controller import *
 from entity import *
 from data import *
@@ -14,6 +15,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
 )
 
 app = Flask(__name__)
+app.register_blueprint(helper)
 app.register_blueprint(entity)
 app.register_blueprint(data)
 app.register_blueprint(controller)
