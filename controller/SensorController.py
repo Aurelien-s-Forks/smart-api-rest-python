@@ -3,7 +3,7 @@ from . import controller
 from data import SensorData
 
 
-@controller.route('/api/sensor', methods=['GET'])
+@controller.route('/api/sensors', methods=['GET'])
 def get_sensors():
     return jsonify(SensorData.get_all())
 
