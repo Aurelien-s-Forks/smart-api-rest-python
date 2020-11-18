@@ -1,0 +1,19 @@
+###
+GET http://localhost:5000/api/
+Accept: application/json
+
+###
+GET http://localhost:5000/api/apartment/5
+Accept: application/json
+
+###
+GET http://localhost:5000/api/apartment/5/sensors
+Accept: application/json
+
+###
+GET http://localhost:5000/api/sensor/4
+Accept: application/json
+
+###
+GET http://localhost:5000/api/sensor/5
+Accept: application/json
