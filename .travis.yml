@@ -1,0 +1,7 @@
+services:
+  - docker
+
+before_install:
+  - docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
+on:
+    branch: master
