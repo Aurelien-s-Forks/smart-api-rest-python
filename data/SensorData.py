@@ -1,7 +1,5 @@
-from datetime import datetime
 import random
-import pytz
-
+from helper import DateHelper
 
 class SensorData:
     @staticmethod
@@ -13,7 +11,7 @@ class SensorData:
                 'type': 'pipeline-pressure',
                 'value': {
                     'pressure': random.randint(1, 5),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
+                    'date': DateHelper.get_today_date()
                 }
             },
             {
@@ -22,7 +20,7 @@ class SensorData:
                 'type': 'temperature',
                 'value': {
                     'pressure': random.randint(15, 22),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
+                    'date': DateHelper.get_today_date()
                 }
             },
             {
@@ -31,7 +29,7 @@ class SensorData:
                 'type': 'temperature',
                 'value': {
                     'pressure': random.randint(15, 22),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
+                    'date': DateHelper.get_today_date()
                 }
             },
             {
@@ -40,7 +38,7 @@ class SensorData:
                 'type': 'temperature',
                 'value': {
                     'pressure': random.randint(10, 15),
-                    'date': datetime.now(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S")
+                    'date': DateHelper.get_today_date()
                 }
             }
         ]
