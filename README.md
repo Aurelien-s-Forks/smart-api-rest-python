@@ -20,7 +20,7 @@ docker push riipeckx/bai-systems-smart-api-rest-python:latest
 
 3. Run the Docker image
 ```bash
-docker run --rm -p 5000:5000 riipeckx/bai-systems-smart-api-rest-python:latest
+chmod u+x docker_deploy.sh docker_stop.sh docker_restart.sh && ./deploy.sh
 ```
 
 ### Installation
