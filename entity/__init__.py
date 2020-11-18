@@ -1,6 +1,9 @@
 from flask import Blueprint
 
-routes = Blueprint('Entity', __name__)
+entity = Blueprint('entity', __name__)
 
-from .Apartment import *
-from .Sensor import *
+from entity.Apartment import Apartment
+from entity.Sensor import Sensor
+from entity.Value import Value
+from entity.Model import Model
+

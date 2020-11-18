@@ -2,6 +2,7 @@
 from flask import Flask, json
 from flask_swagger_ui import get_swaggerui_blueprint
 from routes import *
+from entity import *
 
 swaggerui_blueprint = get_swaggerui_blueprint(
     '/api/docs',
@@ -12,6 +13,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
 )
 
 app = Flask(__name__)
+app.register_blueprint(entity)
 app.register_blueprint(swaggerui_blueprint)
 app.register_blueprint(routes)
 
