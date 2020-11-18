@@ -24,16 +24,18 @@ app.register_blueprint(swaggerui_blueprint)
 
 @app.route('/api/', methods=['GET'])
 def index():
-    response = app.response_class(
+    return app.response_class(
         response=json.dumps("Building AI Systems API"),
         status=200,
         mimetype='application/json'
     )
-    return response
 
 @app.errorhandler(Exception)
 def exception_handler(error):
-    return 'ERROR ' + repr(error)
+    return app.response_class(
+        status=400,
+        mimetype='application/json'
+    )
 
 
 if __name__ == '__main__':

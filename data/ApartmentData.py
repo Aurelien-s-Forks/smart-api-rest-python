@@ -3,6 +3,9 @@ from helper import DateHelper
 
 
 class ApartmentData:
+    def __init__(self):
+        pass
+
     @staticmethod
     def get_all():
         apartment_data = [
@@ -56,4 +59,6 @@ class ApartmentData:
         ]
         return apartment_data
 
-
+    @staticmethod
+    def get_by_id(apartment_id=0):
+        return next(x for x in ApartmentData.get_all() if x["apartment_id"] == int(apartment_id))
