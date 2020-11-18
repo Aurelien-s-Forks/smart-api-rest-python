@@ -13,7 +13,12 @@ This API allows to retrieve data from sensors placed in a building. An artificia
 docker build -t riipeckx/bai-systems-smart-api-rest-python:latest .
 ```
 
-2. Run the Docker image
+2. Push the Docker image
+```bash
+docker push riipeckx/bai-systems-smart-api-rest-python:latest
+```
+
+3. Run the Docker image
 ```bash
 docker run --rm -p 5000:5000 riipeckx/bai-systems-smart-api-rest-python:latest
 ```
