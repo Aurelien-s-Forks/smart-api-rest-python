@@ -4,4 +4,4 @@ controller = Blueprint('controller', __name__)
 
 from .ApartmentController import *
 from .SensorController import *
-from .swagger import *
+from .SwaggerController import *
