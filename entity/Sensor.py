@@ -1,4 +1,4 @@
-from entity import Apartment, Model
+from . import entity
 
 
 class Sensor:
@@ -36,12 +36,13 @@ class Sensor:
 
     @property
     def apartment(self):
-        return self.__apartement
+        return self.__apartment
 
     @apartment.setter
     def apartment(self, apartment):
+        from entity import Apartment
         if type(apartment) == Apartment:
-            self.apartement = apartment
+            self.__apartment = apartment
 
     @property
     def values(self):
@@ -50,3 +51,12 @@ class Sensor:
     @values.setter
     def values(self, val):
         self.__values = val
+
+    def toJson(self):
+        return {
+            "id": self.id,
+            "model": self.model.name,
+            "unit": self.unit,
+            "apartment": self.apartment.id,
+            "values": self.values
+        }

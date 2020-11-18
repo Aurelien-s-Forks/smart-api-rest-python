@@ -1,6 +1,5 @@
 import datetime
-
-from entity import Sensor
+from . import entity
 
 
 class Value:
