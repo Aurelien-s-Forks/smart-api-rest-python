@@ -4,7 +4,7 @@ from helper import DateHelper
 
 class ApartmentData:
     def __init__(self):
-        pass
+        pass    
 
     @staticmethod
     def get_all():
